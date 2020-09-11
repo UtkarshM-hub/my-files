@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time using date function</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        background: black;
+        color: white;
+        font-family: 'Open Sans';
+    }
+
+    #timecon {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    span {
+        font-size: 30px;
+        /* height: 100%; */
+        display: block;
+        position: absolute;
+        margin: 30px 10px;
+    }
+
+    h1 {
+
+        font-size: 150px;
+    }
+</style>
+
+<body>
+    <div id="timecon">
+
+        <h1 id="time">
+        </h1>
+        <sub><span id="time2"></span></sub>
+    </div>
+    <script>
+        function out() {
+            let time = new Date();
+            let hour = time.getHours();
+            let minute = time.getMinutes();
+            let seconds = time.getSeconds();
+            switch (hour) {
+                case 1, 13: {
+                    hour = 1;
+                    break;
+                }
+                case 2, 14: {
+                    hour = 2;
+                    break;
+                }
+                case 3, 15: {
+                    hour = 3;
+                    break;
+                }
+                case 4, 16: {
+                    hour = 4;
+                    break;
+                }
+                case 5, 17: {
+                    hour = 5;
+                    break;
+                }
+                case 6, 18: {
+                    hour = 6;
+                    break;
+                }
+                case 7, 19: {
+                    hour = 7;
+                    break;
+                }
+                case 8, 20: {
+                    hour = 8;
+                    break;
+                }
+                case 9, 21: {
+                    hour = 9;
+                    break;
+                }
+                case 10, 22: {
+                    hour = 10;
+                    break;
+                }
+                case 11, 23: {
+                    hour = 11;
+                    break;
+                }
+                case 12, 24: {
+                    hour = 12;
+                    break;
+                }
+            }
+            document.getElementById("time").innerHTML = hour + " : " + minute;
+            document.getElementById("time2").innerHTML = " : " + seconds;
+        }
+        setInterval(out, 1000);
+
+
+        // settimeout() = only runs or calls function one time
+        // cleartimeout() = only runs or calls function one time
+        // setinterval() = runs after certain number of time and calls function that number of times //use to set the interval
+        // clearinterval() = runs after certain number of time and calls function that number of times// use to clear the interval
+    </script>
+</body>
+
+</html>
