@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow functions</title>
+</head>
+
+<body>
+    <script>
+        // FIRST
+        // let sum = (a, b) => {
+        //     return a + b;
+        // }
+        // let s = sum(10, 10);
+        // console.log(s);
+
+        // SECOND
+        // THIS WILL ONLY WORK IF YOU HAVE ONLY ONE ARGUMENT TO PASS
+
+        // let sum = (a, b) => a + b;
+
+        // let s = sum(10, 10);
+        // console.log(s);
+
+
+        // THIRD
+        // THIS WILL ONLY WORK IF YOU WANT TO PASS AND ONLY ONE PARAMETER
+        // let sum = a => a / 2;
+        // let s = sum(185);
+        // console.log(s);
+
+        // FOURTH
+        // SAME AS THIRD ONE
+        // let sum = a => console.log('lets make some noice');
+        // let s = sum();
+
+
+        // FIFTH AND MOST IMPORTANT 
+
+        // in this function if you use old method to define a function then the 'this.g' element will show undefined 
+        // it will only work if you use the arrow function 
+
+        // WITH ARROW FUNCTION
+
+        let obj = {
+            g: "good morning",
+            names: ["shivam", "shreyash", "aditya", "atharva", "chinmay"],
+            sum() {
+                this.names.forEach(student => {
+                    console.log(this.g + " " + student + " you are looking great");
+                });
+            }
+        }
+        obj.sum();
+
+        // WITHOUT ARROW FUNCTION
+
+        // let obj = {
+        //     g: "good morning",
+        //     names: ["shivam", "shreyash", "aditya", "atharva", "chinmay"],
+        //     sum() {
+        //         this.names.forEach(function (student) {
+        //             console.log(this.g + " " + student + " you are looking great");
+        //         });
+        //     }
+        // }
+        // obj.sum();
+    </script>
+</body>
+
+</html>
