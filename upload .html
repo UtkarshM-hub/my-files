@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            margin: 20px;
+        }
+
+        .container #img1 {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="img1" src=" " alt="this my profile photo">
+    </div>
+    <input type="file" name="file" id="file">
+    <input type="button" value="submit">
+</body>
+<script>
+    document.getElementById('file').onchange = function (evt) {
+        var tgt = evt.target || window.event.srcElement,
+            files = tgt.files;
+
+        // FileReader support
+        if (FileReader && files && files.length) { //we can remove files and files.length
+
+            var fr = new FileReader();
+            fr.onload = function () {
+                document.getElementById("img1").src = fr.result;
+            }
+            fr.readAsDataURL(files[0]);
+        }
+
+        // Not supported
+        else {
+            // fallback -- perhaps submit the input to an iframe and temporarily store
+            // them on the server until the user's session ends.
+        }
+    }
+</script>
+
+</html>
