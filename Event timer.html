@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>party time</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Open Sans';
+    }
+
+    body {
+        color: white;
+        background: rgb(255, 117, 140);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #image {
+        display: flex;
+        color: black;
+        flex-direction: column;
+        height: 400px;
+        width: 800px;
+        background: white;
+    }
+
+    #image h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    #header {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .put {
+        width: 100%;
+    }
+
+    #btn1 {
+        margin: 2% 30%;
+        width: 250px;
+        height: 50px;
+        outline: none;
+        border: 2px solid black;
+        background: transparent;
+        font-weight: 550;
+        font-size: 18px;
+    }
+
+    #btn1:hover {
+        color: rgb(255, 117, 140);
+        ;
+        background: black;
+    }
+
+    #timer {
+        font-size: 50px;
+        color: black;
+    }
+
+    #setting {
+        margin: 150px 0 0 0;
+    }
+
+    /* utlity class */
+    .center {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    h3 {
+        color: black;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 id="header">Lets check what time it is</h1>
+        <h1 class="center" id="timer"></h1>
+        <div id="image">
+            <h1 id="setting"></h1>
+            <h1 id="sit" style="display:none;font-size: 30px;"></h1>
+        </div>
+        <div class="put">
+            <div class="center" id="wakeuptime">
+                <h3>wakeup time: </h3>
+                <select name="wake" id="wake">
+                    <option value="1">1-2 AM</option>
+                    <option value="2">2-3 AM</option>
+                    <option value="3">3-4 AM</option>
+                    <option value="4">4-5 AM</option>
+                    <option value="5">5-5 AM</option>
+                    <option value="6">5-6 AM</option>
+                    <option value="7">7-8 AM</option>
+                    <option value="8">8-9 AM</option>
+                    <option value="9">9-10 AM</option>
+                    <option value="10">10-11 AM</option>
+                    <option value="11">11 AM-12 PM</option>
+                    <option value="12">12-1 PM</option>
+                    <option value="13">1-2 PM</option>
+                    <option value="14">2-3 PM</option>
+                    <option value="15">3-4 PM</option>
+                    <option value="16">4-5 PM</option>
+                    <option value="17">5-6 PM</option>
+                    <option value="18">6-7 PM</option>
+                    <option value="19">7-8 PM</option>
+                    <option value="20">8-9 PM</option>
+                    <option value="21">9-10 PM</option>
+                    <option value="22">10-11 PM</option>
+                    <option value="23">11-12 PM</option>
+                    <option value="24">12 PM-11 AM</option>
+                </select>
+            </div>
+            <div class="center" id="lunchtime">
+                <h3>lunch time: </h3>
+                <select name="lunch" id="lunch">
+                    <option value="1">1-2 AM</option>
+                    <option value="2">2-3 AM</option>
+                    <option value="3">3-4 AM</option>
+                    <option value="4">4-5 AM</option>
+                    <option value="5">5-5 AM</option>
+                    <option value="6">5-6 AM</option>
+                    <option value="7">7-8 AM</option>
+                    <option value="8">8-9 AM</option>
+                    <option value="9">9-10 AM</option>
+                    <option value="10">10-11 AM</option>
+                    <option value="11">11 AM-12 PM</option>
+                    <option value="12">12-1 PM</option>
+                    <option value="13">1-2 PM</option>
+                    <option value="14">2-3 PM</option>
+                    <option value="15">3-4 PM</option>
+                    <option value="16">4-5 PM</option>
+                    <option value="17">5-6 PM</option>
+                    <option value="18">6-7 PM</option>
+                    <option value="19">7-8 PM</option>
+                    <option value="20">8-9 PM</option>
+                    <option value="21">9-10 PM</option>
+                    <option value="22">10-11 PM</option>
+                    <option value="23">11-12 PM</option>
+                    <option value="24">12 PM-11 AM</option>
+                </select>
+            </div>
+            <div class="center" id="naptime">
+                <h3>nap time: </h3>
+                <select name="nap" id="nap">
+                    <option value="1">1-2 AM</option>
+                    <option value="2">2-3 AM</option>
+                    <option value="3">3-4 AM</option>
+                    <option value="4">4-5 AM</option>
+                    <option value="5">5-5 AM</option>
+                    <option value="6">5-6 AM</option>
+                    <option value="7">7-8 AM</option>
+                    <option value="8">8-9 AM</option>
+                    <option value="9">9-10 AM</option>
+                    <option value="10">10-11 AM</option>
+                    <option value="11">11 AM-12 PM</option>
+                    <option value="12">12-1 PM</option>
+                    <option value="13">1-2 PM</option>
+                    <option value="14">2-3 PM</option>
+                    <option value="15">3-4 PM</option>
+                    <option value="16">4-5 PM</option>
+                    <option value="17">5-6 PM</option>
+                    <option value="18">6-7 PM</option>
+                    <option value="19">7-8 PM</option>
+                    <option value="20">8-9 PM</option>
+                    <option value="21">9-10 PM</option>
+                    <option value="22">10-11 PM</option>
+                    <option value="23">11-12 PM</option>
+                    <option value="24">12 PM-11 AM</option>
+                </select>
+            </div>
+            <div class="center" id="partytime">
+                <h3>party time: </h3>
+                <select name="party" id="party">
+                    <option value="1">1-2 AM</option>
+                    <option value="2">2-3 AM</option>
+                    <option value="3">3-4 AM</option>
+                    <option value="4">4-5 AM</option>
+                    <option value="5">5-5 AM</option>
+                    <option value="6">5-6 AM</option>
+                    <option value="7">7-8 AM</option>
+                    <option value="8">8-9 AM</option>
+                    <option value="9">9-10 AM</option>
+                    <option value="10">10-11 AM</option>
+                    <option value="11">11 AM-12 PM</option>
+                    <option value="12">12-1 PM</option>
+                    <option value="13">1-2 PM</option>
+                    <option value="14">2-3 PM</option>
+                    <option value="15">3-4 PM</option>
+                    <option value="16">4-5 PM</option>
+                    <option value="17">5-6 PM</option>
+                    <option value="18">6-7 PM</option>
+                    <option value="19">7-8 PM</option>
+                    <option value="20">8-9 PM</option>
+                    <option value="21">9-10 PM</option>
+                    <option value="22">10-11 PM</option>
+                    <option value="23">11-12 PM</option>
+                    <option value="24">12 PM-11 AM</option>
+                </select>
+            </div>
+            <button class="center" id="btn1">check time</button>
+        </div>
+    </div>
+</body>
+<script>
+    let waketime = 7;
+    let noon = 12;
+    let lunch = noon + 2;
+    let party;
+    let evening = 18;
+
+    //  DISPLAYING CURRENT TIME
+    function gettime() {
+        let time = new Date();
+
+        let hour = time.getHours();
+        let minutes = time.getMinutes();
+        let seconds = time.getSeconds();
+        let day = 'AM';
+        if (hour >= noon) {
+            day = 'PM'
+        } else {
+            day = 'AM';
+        }
+
+
+        // HOURS
+        if (hour < 10) {
+            hour = "0" + hour;
+        }
+        if (hour > 12) {
+            hour = hour - 12;
+        }
+
+        // MINUTES
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+
+        // SECONDS
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        var timer = document.getElementById("timer").innerHTML = hour + " : " + minutes + " : " + seconds + " : " + day;
+        // timer.innerText = hour + " : " + minutes + " : " + seconds;
+
+        var an = hour + day;
+        return an;
+    }
+
+    function updatetimer() {
+        let oneSecond = 1000;
+        setInterval(gettime, oneSecond);
+    }
+    gettime();
+    updatetimer();
+
+
+    // setting the values
+
+    document.getElementById("wake").addEventListener("change", wakingup);
+    let time = new Date();
+    let now = time.getHours();
+
+    // wakingup
+    function wakingup() {
+        let sett = document.getElementById("setting");
+        let w = document.getElementById("wake").value;
+        if (w == now) {
+            sett.innerHTML = "time to wake up";
+        }
+    }
+
+
+    // LUNCHTIME
+
+    document.getElementById("lunch").addEventListener("change", lunchup);
+
+    function lunchup() {
+        let sett = document.getElementById("setting");
+        let w = document.getElementById("lunch").value;
+        if (w == now) {
+            sett.innerHTML = "Lunch time";
+        }
+    }
+
+
+
+    // NAP
+    document.getElementById("nap").addEventListener("change", napup);
+
+    function napup() {
+        let sett = document.getElementById("setting");
+        let w = document.getElementById("nap").value;
+        if (w == now) {
+            sett.innerHTML = "Nap time";
+        }
+    }
+
+
+
+    // party
+    document.getElementById("party").addEventListener("change", partyup);
+
+    function partyup() {
+        let sett = document.getElementById("setting");
+        let w = document.getElementById("party").value;
+        if (w == now) {
+            sett.innerHTML = "Party time";
+        }
+
+    }
+
+    // submition
+    document.getElementById("btn1").addEventListener("click", doit);
+    var a = gettime();
+
+    function doit() {
+        var te = document.getElementById("setting").innerHTML;
+        var conc = document.getElementById("sit");
+        if (te === "") {
+            conc.style.display = "block";
+            conc.innerHTML = "It's " + a;
+
+        } else {
+            conc.style.display = "block";
+            conc.innerHTML = "It's " + a + " and it's " + te;
+
+        }
+
+    }
+</script>
+
+</html>

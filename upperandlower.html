@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convert</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans';
+    }
+
+    body {
+        background: rgb(81, 7, 150);
+    }
+
+    .container {
+        display: flex;
+        height: 500px;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 50px 0 0 0;
+        background: rgb(100, 29, 167);
+        padding: 50px 0;
+    }
+
+    .serv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* border: 2px solid black;s */
+        height: 90%;
+        width: 85%;
+        margin: 20px;
+        background: whitesmoke;
+        font-size: 80px;
+        font-weight: 500;
+        flex-wrap: wrap;
+        overflow: scroll
+    }
+
+    .container input,
+    select {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .container input[type='button'] {
+        margin: 0 0 0 50px;
+        color: white;
+        background: transparent;
+        border: 2px solid white;
+        outline: none;
+    }
+
+    .container input[type='button']:hover {
+        background: white;
+        color: black;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="serv">
+            <p id="taka"></p>
+        </div>
+        <div class="selecter">
+            <input type="text" name="text1" id="text1">
+            <select name="case" id="case">
+                <option value="" disabled selected>select</option>
+                <option value="up">Uppercase</option>
+                <option value="low">Lowercase</option>
+            </select>
+            <input type="button" value="submit" onclick="run()">
+        </div>
+
+    </div>
+</body>
+<script>
+    function run() {
+        // getting and setting input value to the  container
+        let tex5 = document.getElementById("text1").value;
+
+        // targetting text under container
+
+
+        // getting input value from the user
+        let casa = document.getElementById("case").value;
+        // console.log(casa);
+        if (casa == 'up') {
+            let kaha = tex5.toUpperCase();
+            document.getElementById("taka").innerHTML = kaha;
+        } else {
+            let haha = tex5.toLowerCase();
+            document.getElementById("taka").innerHTML = haha;
+
+        }
+    }
+</script>
+
+</html>
