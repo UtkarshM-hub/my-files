@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: rgb(5,2,68);
+    background: linear-gradient(43deg, rgba(5,2,68,1) 9%, rgba(13,13,110,1) 9%, rgba(45,49,166,1) 17%, rgba(15,23,126,1) 17%, rgba(15,23,126,1) 47%, rgba(0,212,255,1) 100%);
+}
+
+/* HEADING SECTION */
+
+/* CONTACT INFO */
+
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(13,13,110,1);
+}
+#contact ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#contact ul li{
+    color: white;
+    display: block;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+}
+#conInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* NAVIGAION PANEL */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #ffffff21;
+}
+#navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navbar ul li{
+    display: block;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+#navbar #logo{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+/* MAIN SECTION */
+
+#content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#image{
+    position: relative;
+    height: 25em;
+    width: 25em;
+    margin-left: 7rem;
+}
+#second{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("./undraw_my_app_grf2.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#headings{
+    height: 11em;
+    width: 24em;
+    margin-right: 7em;
+}
+#headings h2{
+    font-size: 3em;
+    font-weight: bolder;
+    color: white;
+}
+#headings p{
+    color: rgb(161, 161, 161);
+    padding: 0.3em 0 0.3em 0;
+}
+#started{
+    height: 3em;
+    width: 8.5em;
+    margin-top: 1.4em;
+    cursor: pointer;
+    border: none;
+    transition: 300ms;
+}
+#started:hover{
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* INPUTS */
+
+#info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#inp{
+    height: 3.5em;
+    width: 55em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#inp input{
+    position: relative;
+    width: 55em;
+    height: 3.5em;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+}
+#inp #search{
+    height: 3.5em;
+    position: absolute;
+    width: 6em;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background: #137499;
+    color: white;
+    left: 56em;
+    cursor: pointer;
+}
+#info #search:hover{
+    background: #19a6dd;
+}
+#info ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* UTILITY CLASSES */
+.price{
+    color: rgb(32, 99, 201);
+    font-weight: bolder;
+}
+.domain{
+    color: white;
+    font-weight: 550;
+    padding: 1.5em;
+}
