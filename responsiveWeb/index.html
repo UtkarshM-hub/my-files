@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple website</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo"><span class="highlited">S</span>tarting</div>
+            <ul id="sidebar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#footersection">Contact Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li></li>
+                <li><a style="display: none;color: red;" onclick="cFun()" id="Cose" href="#">Close</a></li>
+
+            </ul>
+            <p id="openBtn" style="display: none;" onclick="oFun()">Open</p>
+        </div>
+    </nav>
+    <div id="home">
+        <div class="texture">
+            <h1>Make your dreams come true</h1>
+            <p>with india's best teachers in our organization</p>
+        </div>
+        <div class="callToAction">
+            <a href="#login" style="cursor: pointer;" class="loginBtn">Get started</a>
+            <a href="#services" style="cursor: pointer;" class="knowBtn">know more</a>
+        </div>
+    </div>
+    <section id="about">
+        <div class="content">
+            <h4>The biggest opportunity</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolorem eos similique. Officia quibusdam
+                ullam molestias tenetur. Et, facilis sit?</p>
+            <a href="#login" class="loginBtn">Get started</a>
+        </div>
+        <div class="imgCont"></div>
+    </section>
+    <section id="services">
+        <div class="card">
+            <h2> <span class="highlited"> More adventure</span></h2>
+            <p>experience the most thrilling moments of your life.</p>
+            <a href="#login" class="loginBtn">Enroll now</a>
+        </div>
+        <div class="card">
+            <h2> <span class="highlited">Safety</span></h2>
+            <p>be safe, feel secure and enjoy your beautiful journey with starting.</p>
+            <a href="#login" class="loginBtn">Enroll now</a>
+        </div>
+        <div class="card">
+            <h2> <span class="highlited">Easy to enroll</span></h2>
+            <p>wanna join us then enroll in our membership program</p>
+            <a href="#login" class="loginBtn">Enroll now</a>
+        </div>
+    </section>
+    <section id="login">
+        <div class="request">
+            <h2>Make your journey safe and adeventerous with us.</h2>
+        </div>
+        <div class="lform">
+            <form id="mainForm">
+                <input class="inpEle" type="text" placeholder="Enter your first name" required>
+                <input class="inpEle" type="text" placeholder="Enter your last name" required>
+                <input class="inpEle" type="email" placeholder="Enter your e-mail" required>
+                <button class="loginBtn" id="submitBtn">submit</button>
+            </form>
+        </div>
+    </section>
+    <div id="footersection">
+        <div id="whatWeDo">
+            <ul>
+                <li>WHAT WE DO</li>
+                <li>OUR WORK</li>
+                <li>COMPANY</li>
+                <li>CONTACT</li>
+            </ul>
+        </div>
+        <div id="address">
+            <p>1776 Peachtree Street NW, Suite 4407, Atlanta GA 30309<br> 678.974.5800<br><span
+                    id="mail">hello@starting.com</span> </p>
+        </div>
+        <div id="copyleft">
+            <p>copyright&COPY; 2020 May be.For You, Inc, All rights reserved.</p>
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>
